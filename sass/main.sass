@@ -169,6 +169,10 @@
 			color: $accent
 			font-size: 16px
 
+			&:hover
+				color: $accent
+				cursor: pointer
+
 		&--city
 			font-size: 10px
 			color: #828282
@@ -309,7 +313,7 @@
 
 	&__illustration
 		width: 100%
-		background-image: url(../img/about-us-bg.png)
+		background-image: url(../img/light-bg.png)
 		background-size: cover
 		padding-bottom: 115px
 
@@ -350,18 +354,105 @@
 	&__wrapper
 		+between
 		flex-direction: column
-	
+		position: relative
+		padding-top: 215px
+		padding-bottom: 185px
+
 	&__title
-		font-size: 200px
-		color: #ffffff
-		text-transform: uppercase
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+
+	&__items
+		+between
+		width: 100%
+		row-gap: 110px
+	
+	&__content
+		+between
+		width: 100%
+
+		&:nth-child(2)
+			flex-direction: row-reverse
+		
+		&:nth-child(4)
+			flex-direction: row-reverse
+			
+
+		&--text
+			+between
+			flex-direction: column
+			align-items: start
+			max-width: 580px
+
+		&--title
+			font-size: 48px
+			font-family: $titleFont
+			margin-bottom: 45px
+
+		&--description
+			font-size: 18px
+			margin-bottom: 55px
+
+		&--info
+			+between
+			column-gap: 40px  
+		
+		&--button
+			max-width: 165px
+			height: 60px
+			text-transform: uppercase
+
+		&--price
+			color: $accent
+			font-family: $titleFont
+			text-transform: uppercase
+			font-size: 18px
+
+			span
+				font-size: 10px
+				vertical-align: top
+
+		&--image
+			max-width: 580px
+			
+			img
+				width: 100%
+				border: 10px solid #ffffff
+
+.portfolio
+	background-image: url(../img/light-bg.png)
+	padding-top: 165px
+	padding-bottom: 200px
+
+	&__top
+		+between
+		margin-bottom: 75px
+
+	&__title
 		font-family: $titleFont
-		opacity: 0.8
-		letter-spacing: 30px
-		line-height: 1
-		vertical-align: top
-		margin: 0
-		padding: 0
+		font-size: 50px
+
+		span
+			color: $accent
+
+	&__button
+		max-width: 180px
+		height: 60px
+
+	&__slider
+		padding-left: 270px
+
+		&--image
+			width: 410px
+
+		&--item
+			width: 410px
+
+.owl-dots
+			
 
 
 
