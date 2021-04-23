@@ -3,29 +3,29 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	//----------------------SLIDER-hero----------------------
-		// var mySwiper = new Swiper('.hero__slider', {
-		// 	slidesPerView: 1,
-		// 	spaceBetween: 30,
-		// 	loop: true,
-		// 	effect: 'fade',
-		// 	autoplay: {
-		// 		delay: 5000,
-		// 	},
-		// 	pagination: {
-		// 		el: '.hero__pagination',
-		// 		clickable: 'true',
-		// 	},
-		// 	navigation: {
-		// 		nextEl: '.hero__next',
-		// 		prevEl: '.hero__prev',
-		// 	},
-		// 	breakpoints: {
-		// 		320: {
-		// 			slidesPerView: 2,
-		// 			spaceBetween: 20
-		// 		},
-		// 	}
-		// });
+		var mySwiper = new Swiper('.hero__slider', {
+			slidesPerView: 3,
+			spaceBetween: 30,
+			loop: true,
+			effect: 'fade',
+			autoplay: {
+				delay: 5000,
+			},
+			pagination: {
+				el: '.hero__pagination',
+				clickable: 'true',
+			},
+			navigation: {
+				nextEl: '.hero__next',
+				prevEl: '.hero__prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 2,
+					spaceBetween: 20
+				},
+			}
+		});
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
@@ -309,19 +309,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //---------------------------owl-carousel------------------------
 $('.owl-carousel').owlCarousel({
-    stagePadding: 50,
     loop:true,
-    margin: 40,
+    margin:25,
     nav:true,
+	dots: true,
     responsive:{
         0:{
             items:1
         },
         600:{
-            items:3
+            items:2
         },
         1000:{
-            items:3.3
+            items:3
         }
     }
 })
