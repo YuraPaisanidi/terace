@@ -231,58 +231,49 @@
 		</div>
 	</section>
 
-	<!-- <section class="portfolio">
+	<section class="portfolio">
 		<div class="portfolio__wrapper">
 			<div class="portfolio__top container">
 				<h3 class="portfolio__title"><span>Создаем комфорт</span> и уют</h3>
 				<a href="/" class="portfolio__button btn">Все проекты</a>
 			</div>
-			<div class="portfolio__slider">
-				<!-- <div class="portfolio__slider--wrapper owl-carousel owl-theme container">
-					<div class="portfolio__slider--item item">
-						<img class="portfolio__slider--image" src="img/slider-item-1.png" alt="">
+			<div class="portfolio__slider container">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="portfolio__slider--image" src="img/slider-item-1.png" alt="">
+							<a href="/">Терассы у дома в лесу</a>
+						</div>
+						<div class="swiper-slide">
+							<img class="portfolio__slider--image" src="img/slider-item-2.png" alt="">
+							<a href="/">Дизайнерский мост<br>через через речку</a>
+						</div>
+						<div class="swiper-slide">
+							<img class="portfolio__slider--image" src="img/slider-item-3.png" alt="">
+							<a href="/">Терассы с дизайнерским<br>решением</a>
+						</div>
+						<div class="swiper-slide">
+							<img class="portfolio__slider--image" src="img/slider-item-2.png" alt="">
+							<a href="/">Терраса вокруг загородного дома с системой ограждений</a>
+						</div>
 					</div>
-					<div class="portfolio__slider--item item">
-						<img class="portfolio__slider--image" src="img/slider-item-2.png" alt="">
+					<div class="swiper-pagination"></div>
+					<div class="swiper-arrows">
+						<div class="swiper-button-prev">
+							<a href="/">
+								<img src="img/prev-arrow.png" alt="" class="slider-arrow">
+							</a>
+						</div>
+						<div class="swiper-button-next">
+							<a href="/">
+								<img src="img/next-arrow.png" alt="" class="slider-arrow">
+							</a>
+						</div>
 					</div>
-					<div class="portfolio__slider--item item">
-						<img class="portfolio__slider--image" src="img/slider-item-3.png" alt="">
-					</div>
-					<div class="portfolio__slider--item item">
-						<img class="portfolio__slider--image" src="img/slider-item-2.png" alt="">
-					</div>
-				</div> -->
-				<!-- <div class="hero__slider container">
-					<!-- Additional required wrapper -->
-					<!-- <div class="swiper-wrapper"> -->
-					  <!-- Slides -->
-					  <!-- <div class="swiper-slide"> -->
-						<!-- <img src="img/slider-item-1.png" alt=""> -->
-					  <!-- </div> -->
-					  <!-- <div class="swiper-slide"> -->
-						<!-- <img src="img/slider-item-2.png" alt=""> -->
-					  <!-- </div> -->
-					  <!-- <div class="swiper-slide"> -->
-						<!-- <img src="img/slider-item-3.png" alt=""> -->
-					  <!-- </div> -->
-					  <!-- <div class="swiper-slide"> -->
-						<!-- <img src="img/slider-item-2.png" alt=""> -->
-					  <!-- </div> -->
-					  <!-- ... -->
-					<!-- </div> -->
-					<!-- If we need pagination -->
-					<!-- <div class="swiper-pagination"></div> -->
-				  
-					<!-- If we need navigation buttons -->
-					<!-- <div class="swiper-button-prev"></div> -->
-					<!-- <div class="swiper-button-next"></div> -->
-				  
-					<!-- If we need scrollbar -->
-					<!-- <div class="swiper-scrollbar"></div> -->
-				  <!-- </div> -->
-			<!-- </div> -->
-		<!-- </div> -->
-	<!-- </section> -->
+				  </div>
+			</div>
+	</section>
+
 	<section class="turnkey">
 		<div class="turnkey__wrapper container">
 			<h2 class="turnkey__title">Предоставляем полный<br>перечень услуг <span>"под ключ"</span></h2>
@@ -393,6 +384,50 @@
 		</div>
 	</section>
 
+	<section class="contacts">
+		<div class="contacts__wrapper container">
+			<h2 class="contacts__title">Получите бесплатную<br>консультацию от нашего<br>дизайнера</h2>
+			<div class="contacts__item">
+				<form action="" class="contacts__form">
+					<div class="contacts__form--item">
+						<label for="formName">Ваше имя</label>
+						<input type="text" name="name" id="formName" required>
+					</div>
+					<div class="contacts__form--item">
+						<label for="formTel">Номер телефона</label>
+						<input type="tel" name="phone" id="formTel" required>
+					</div>
+					<a href="/" class="contacts__form--button btn">Получить консультацию</a>
+					<p class="contacts__form--info">
+						Нажимая на кнопку «Получить консультацию» вы
+						соглашаетесь с <a>политикой конфиденциальности</a> сайта
+					</p>
+				</form>
+				<div class="contacts__requisites">
+					<h4 class="contacts__requisites--title">или обращайтесь<br>напрямую</h4>
+					<div class="contacts__requisites--item">
+						<p class="contacts__requisites--city">
+							Санкт-Петербург
+						</p>
+						<a class="contacts__requisites--num">
+							+7(981)140-63-39
+						</a>
+					</div>
+					<div class="contacts__requisites--item">
+						<p class="contacts__requisites--city">
+							Смоленск
+						</p>
+						<a class="contacts__requisites--num">
+							+7(920)323-74-94
+						</a>
+					</div>
+					<a href="mailto:info@centr-terrasnoi-doski.ru" class="contacts__requisites--email">
+						info@centr-terrasnoi-doski.ru
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<!-- <section class="section">
 		<div class="container section__container">
@@ -405,8 +440,15 @@
 	</section> -->
 
 	<footer class="footer">
-		<div class="footer__container container">
-			
+		<div class="footer__wrapper container">
+			<a href="/" class="footer__policy">Политика конфиденциальности</a>
+			<p class="footer__copyright">Copyright © 2016 - 2021 Центр террасной доски</p>
+			<div class="footer__made-by">
+				<p>Сайт разработан веб-студией</p>
+				<a href="/" class="footer__made-by--link">
+					<img src="img/made-by.png" alt="Четыре квадрата">
+				</a>
+			</div>
 		</div>
 	</footer>
 

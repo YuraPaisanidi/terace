@@ -3,29 +3,66 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	//----------------------SLIDER-hero----------------------
-		var mySwiper = new Swiper('.hero__slider', {
+		// var mySwiper = new Swiper('.hero__slider', {
+		// 	slidesPerView: 3,
+		// 	spaceBetween: 30,
+		// 	loop: true,
+		// 	effect: 'fade',
+		// 	autoplay: {
+		// 		delay: 5000,
+		// 	},
+		// 	pagination: {
+		// 		el: '.hero__pagination',
+		// 		clickable: 'true',
+		// 		type: 'progressbar',
+		// 	},
+		// 	navigation: {
+		// 		nextEl: '.hero__next',
+		// 		prevEl: '.hero__prev',
+		// 	},
+		// 	breakpoints: {
+		// 		320: {
+		// 			slidesPerView: 2,
+		// 			spaceBetween: 20
+		// 		},
+		// 	}
+		// });
+
+		var swiper = new Swiper('.swiper-container', {
 			slidesPerView: 3,
-			spaceBetween: 30,
-			loop: true,
-			effect: 'fade',
-			autoplay: {
-				delay: 5000,
-			},
+			spaceBetween: 40,
 			pagination: {
-				el: '.hero__pagination',
-				clickable: 'true',
+			  el: '.swiper-pagination',
+			  type: 'progressbar',
 			},
 			navigation: {
-				nextEl: '.hero__next',
-				prevEl: '.hero__prev',
+			  nextEl: '.swiper-button-next',
+			  prevEl: '.swiper-button-prev',
 			},
 			breakpoints: {
-				320: {
+				1920: {
+					slidesPerView: 3,
+				},
+				1200: {
 					slidesPerView: 2,
-					spaceBetween: 20
+				},
+				992: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 1,
+				},
+				576: {
+					slidesPerView: 1,
+				},
+				480: {
+					slidesPerView: 1,
+				},
+				320: {
+					slidesPerView: 1,
 				},
 			}
-		});
+		  });
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
