@@ -2,32 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	//----------------------SLIDER-hero----------------------
-		// var mySwiper = new Swiper('.hero__slider', {
-		// 	slidesPerView: 3,
-		// 	spaceBetween: 30,
-		// 	loop: true,
-		// 	effect: 'fade',
-		// 	autoplay: {
-		// 		delay: 5000,
-		// 	},
-		// 	pagination: {
-		// 		el: '.hero__pagination',
-		// 		clickable: 'true',
-		// 		type: 'progressbar',
-		// 	},
-		// 	navigation: {
-		// 		nextEl: '.hero__next',
-		// 		prevEl: '.hero__prev',
-		// 	},
-		// 	breakpoints: {
-		// 		320: {
-		// 			slidesPerView: 2,
-		// 			spaceBetween: 20
-		// 		},
-		// 	}
-		// });
-
+	//----------------------swiper-SLIDER---------------------
 		var swiper = new Swiper('.swiper-container', {
 			slidesPerView: 3,
 			spaceBetween: 40,
@@ -119,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 	
 		};
-		// headerFixed('.header', '.header--active');
+		headerFixed('.header', '.header--active');
 	
 	//----------------------HAMBURGER-----------------------
 		const hamburger = (hamburgerButton, hamburgerNav, hamburgerHeader) => {
@@ -344,23 +319,55 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-//---------------------------owl-carousel------------------------
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:25,
-    nav:true,
-	dots: true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-})
-//---------------------------------------------------------------
+//------------------------------------------- tabs
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+	const header = document.querySelector(headerSelector),
+				tab = document.querySelectorAll(tabSelector),
+				content = document.querySelectorAll(contentSelector);
+
+	function hideTabContent() {
+		content.forEach(item => {
+			item.style.display = "none";
+		});
+
+		tab.forEach(item => {
+			item.classList.remove(activeClass);
+		});
+	}
+
+	function showTabContent(i = 0) {
+		content[i].style.display = "block";
+		tab[i].classList.add(activeClass);
+	}
+
+	hideTabContent();
+	showTabContent();
+
+	header.addEventListener('click', (e) => {
+		const target = e.target;
+		if (target && 
+			(target.classList.contains(tabSelector.replace(/\./, '')) || 
+			target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
+			tab.forEach((item, i) => {
+				if (target == item || target.parentNode == item) {
+					hideTabContent();
+					showTabContent(i);
+				}
+			});
+		}
+	});
+};
+tabs('.performered-tabs', '.performered-tabs__item', '.performered-tabs__wrap', 'active');
+
+$('.performered-tabs__wrap').hide();
+$('.performered-tabs__wrap:first').show();
+$('.performered-tabs ul a:first').addClass('active');
+ $('.performered-tabs ul a').click(function(event){
+  event.preventDefault();
+  $('.performered-tabs ul a').removeClass('active');
+  $(this).addClass('active');
+  $('.performered-tabs__wrap').hide();
+   var selectTab = $(this).attr('href');
+  $(selectTab).fadeIn();
+});
 	
