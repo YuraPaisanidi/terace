@@ -76,6 +76,37 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		};
 		// scrollTo('.header__nav');
+
+		//------------------------------ACCORDIONS---------------------------
+const accordions = (accordionSelector) => {
+	const	accordion = document.querySelectorAll(accordionSelector);
+
+	accordion.forEach(item => {
+		const accordionClick = item.querySelector('.leftbar__header'),
+					accordionContent = item.querySelector('.leftbar__content');
+
+		accordionClick.addEventListener('click', (e) => {
+			if(!item.classList.contains('leftbar--active')) {
+
+				item.classList.add('leftbar--active')
+				accordionContent.style.height = "auto"
+				var height = accordionContent.clientHeight + "px"
+				accordionContent.style.height = "0px"
+
+				setTimeout(() => {
+					accordionContent.style.height = height
+				}, 0)
+
+				} else {
+					accordionContent.style.height = "0px"
+						item.classList.remove('leftbar--active')
+			}
+
+		});
+	});
+
+};
+accordions('.leftbar');
 	
 	//----------------------FIXED-HEADER-----------------------
 		const headerFixed = (headerFixed, headerActive) => {
