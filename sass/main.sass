@@ -337,8 +337,8 @@ h3
 			font-size: 20px
 
 			&:hover
-					color: #ffffff
-					text-decoration: underline
+				color: #ffffff
+				text-decoration: underline
 
 		&--city
 			font-size: 16px
@@ -884,7 +884,6 @@ h3
 		+r(1200)
 			text-align: center
 			margin-bottom: 40px
-
 
 		span
 			color: $accent
@@ -1655,7 +1654,6 @@ h3
 		line-height: 40px
 		padding: 0 15px
 		border: 1px solid $accent
-		
 
 		&::placeholder
 			line-height: 40px
@@ -1669,7 +1667,6 @@ h3
 			box-shadow: 0 0 4px 0 rgba(red, 1)
 			border-color: red
 
-	
 	&__select
 		height: 50px
 		width: 100%
@@ -1710,7 +1707,6 @@ h3
 			border-left: 4px solid transparent
 			border-right: 4px solid transparent
 			border-top: 4px solid transparent
-
 
 //------------ Performered---------
 
@@ -1759,13 +1755,11 @@ h3
 			&:focus
 				background-color: $accent
 
-
-
 	&__wrap
 		display: grid
-		grid-template-columns: 1fr 5fr 
+		grid-template-columns: 1fr 5fr
 		+r(576)
-			grid-template-columns: 1fr 
+			grid-template-columns: 1fr
 
 		h2
 			font-size: 60px
@@ -1776,8 +1770,6 @@ h3
 			+r(767)
 				font-size: 32px
 				text-align: center
-
-		
 
 	&-tabs__wrap-item
 		width: 30%
@@ -1802,13 +1794,8 @@ h3
 		justify-content: flex-start
 		gap: 30px
 
-	
-
-
-
 .leftbar
 	padding: 10px 0
-
 
 	&:last-child
 		margin-bottom: 0
@@ -1820,13 +1807,13 @@ h3
 		justify-content: space-between
 		cursor: pointer
 		font-weight: 700
+
 		p
 			font-size: 16px
+
 		+r(992)
 			p
 				font-size: 14px
-
-
 
 	&__content
 		+transition
@@ -1835,7 +1822,6 @@ h3
 		padding-left: 20px
 		height: 0
 		position: relative
-		
 
 		li
 			font-size: 16px
@@ -1850,6 +1836,9 @@ h3
 				width: 10px
 				background-color: $text
 
+			&:hover
+				text-decoration: underline
+
 		+r(1200)
 			padding-left: 20px
 
@@ -1862,11 +1851,8 @@ h3
 			&__header
 				margin-bottom: 15px
 
-
 			&__content
 				opacity: 1
-
-
 
 //------------ Mounting---------
 .mounting
@@ -1875,7 +1861,7 @@ h3
 
 	&__wrap
 		display: grid
-		grid-template-columns: 1fr 5fr 
+		grid-template-columns: 1fr 5fr
 		h2
 			margin-bottom: 35px
 		&-text
@@ -1897,14 +1883,12 @@ h3
 			&--right
 				font-size: 18px
 
-
 .prices
 	background-color: #f7f5f5
 	&__wrap
-		display:grid
+		display: grid
 		grid-column-start: 3
-		grid-template-columns: 1fr 
-
+		grid-template-columns: 1fr
 
 	h3
 		margin-bottom: 30px
@@ -1918,7 +1902,6 @@ h3
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr
 
-
 		&-img
 			width: 90%
 			border: 10px solid #fff
@@ -1926,7 +1909,6 @@ h3
 			img
 				width: 100%
 				height: auto
-
 
 .professional
 	padding-top: 100px
@@ -1945,11 +1927,11 @@ h3
 		+r(1200)
 			gap: 30px
 		+r(767)
-			grid-template-columns: 1fr 1fr 1fr 
+			grid-template-columns: 1fr 1fr 1fr
 		+r(576)
-			grid-template-columns: 1fr 1fr 
+			grid-template-columns: 1fr 1fr
 		+r(480)
-			grid-template-columns: 1fr 
+			grid-template-columns: 1fr
 
 	&__item
 
@@ -1965,7 +1947,6 @@ h3
 
 			+r(576)
 
-
 		&--info
 			font-size: 20px
 			max-width: 300px
@@ -1975,4 +1956,533 @@ h3
 			+r(320)
 				text-align: center
 
+//-----------------------Cart---------------------
 
+.cart
+	background-color: $bgColor
+	padding-top: 95px
+	padding-bottom: 140px
+
+	+r(1440)
+		padding-top: 90px
+		padding-bottom: 90px
+
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+
+	&__wrapper
+		display: grid
+		grid-template-columns: 1fr 5fr
+
+		+r(576)
+			grid-template-columns: 1fr
+
+			+r(1200)
+				font-size: 45px
+				+r(767)
+					font-size: 32px
+					text-align: center
+
+	&__list
+		padding-right: 30px
+		grid-row-start: 1
+		grid-row-end: 5
+
+		+r(576)
+			display: none
+
+.leftbar-link
+	padding: 10px 0
+
+	&__header
+
+		p
+			font-size: 16px
+			font-weight: bold
+
+			&:hover
+				text-decoration: underline
+
+.product
+	padding-bottom: 50px
+
+	+r(1440)
+		padding-bottom: 0
+
+	&__title
+		font-family: $titleFont
+		font-size: 41px
+		margin-bottom: 60px
+		line-height: 1.5
+
+		+r(1440)
+			font-size: 36px
+
+		+r(992)
+			font-size: 28px
+			margin-bottom: 35px
+
+		+r(768)
+			font-size: 24px
+
+		+r(576)
+			font-size: 22px
+			text-align: center
+
+		+r(480)
+			text-align: left
+			max-width: 320px
+
+		span
+			color: $accent
+
+	&__item
+		+between
+
+		+r(1440)
+			align-items: start
+			justify-content: normal
+			gap: 150px
+
+		+r(1200)
+			gap: 30px
+
+		+r(992)
+			gap: 30px
+
+		+r(576)
+			width: 100%
+
+	&__image
+		max-width: 400px
+		overflow: hidden
+		width: 400/1083*100%
+
+		+r(768)
+			width: 70%
+
+		+r(576)
+			width: 100%
+			max-width: 576px
+
+		+r(480)
+			max-width: 320px
+
+		img
+			object-fit: cover
+			width: 100%
+
+	&__description
+		+between
+		flex-direction: column
+		gap: 50px
+		max-width: 650px
+
+		+r(1440)
+			gap: 25px
+
+		+r(992)
+			gap: 15px
+
+		+r(576)
+			width: 100%
+
+	&__info
+		display: grid
+		grid-template-columns: 1fr 1fr
+		width: 100%
+		padding: 35px 30px
+		border: 1px solid #c6c5c5
+		grid-gap: 65px
+
+		+r(1440)
+			grid-template-columns: 1fr
+			max-width: 350px
+			grid-gap: 10px
+			padding-top: 20px
+			max-height: 337px
+
+		+r(992)
+			padding-bottom: 20px
+
+		+r(768)
+			grid-template-columns: 1fr 1fr
+			padding-right: 15px
+
+		+r(576)
+			width: 100%
+			max-width: 576px
+			grid-gap: 100px
+
+		+r(480)
+			max-width: 480px
+			grid-template-columns: 1fr
+			grid-gap: 10px
+
+		&--column
+			+between
+			flex-direction: column
+			align-items: start
+			gap: 10px
+
+			&:first-child
+				width: 280px
+
+				+r(992)
+					width: 100%
+
+				+r(576)
+					width: 170px
+
+			p
+				font-size: 20px
+
+				+r(992)
+					font-size: 14px
+
+				+r(768)
+					font-size: 12px
+
+				span
+					color: $accent
+
+	&__price
+		display: flex
+		+between
+		gap: 35px
+		align-self: start
+
+		+r(1440)
+			flex-direction: column
+			align-items: center
+			width: 100%
+
+		+r(992)
+			gap: 15px
+
+		&--value
+			font-size: 45px
+			font-family: $titleFont
+			color: $accent
+
+			span
+				font-size: 30px
+
+				+r(992)
+					font-size: 22px
+
+				+r(768)
+					font-size: 18px
+
+				+r(480)
+					font-size: 16px
+
+			+r(1440)
+				font-size: 36px
+
+			+r(992)
+				font-size: 26px
+
+			+r(768)
+				font-size: 22px
+
+			+r(480)
+				font-size: 20px
+
+		&--button
+			width: 220px
+			height: 60px
+
+			+r(1200)
+				height: 50px
+
+			+r(768)
+				font-size: 12px
+				width: 180px
+
+.properties
+	padding-top: 45px
+	padding-bottom: 195px
+	+between
+
+	+r(1440)
+		justify-content: normal
+		gap: 150px
+		align-items: start
+		padding-bottom: 90px
+
+	+r(1200)
+		gap: 30px
+
+	+r(992)
+		padding-top: 25px
+		padding-bottom: 50px
+
+	+r(768)
+		padding-bottom: 35px
+
+	+r(576)
+		gap: 25px
+
+	&__title
+		font-size: 22px
+		font-weight: bold
+		margin-bottom: 40px
+
+		+r(992)
+			font-size: 18px
+
+		+r(768)
+			font-size: 14px
+			margin-bottom: 20px
+
+	&__info
+
+		+r(768)
+			max-width: 350px
+			width: 100%
+
+		+r(576)
+			max-width: 576px
+		
+		+r(480)
+			text-align: left
+
+	&__description
+		border: 1px solid #c6c5c5
+		padding: 30px
+		+between
+		flex-direction: column
+		align-items: start
+		gap: 20px
+
+		+r(992)
+			padding: 15px
+
+		p
+			color: $accent
+			font-size: 20px
+			font-weight: bold
+
+			+r(1200)
+				font-size: 16px
+
+			+r(992)
+				font-size: 12px
+
+		&--image
+			position: relative
+
+			&::after
+				content: ''
+				background-image: url(../img/cart-prop-img.jpg)
+				background-size: contain
+				background-repeat: no-repeat
+				position: absolute
+				width: 180px
+				height: 50px
+				left: 115px
+				top: -5px
+
+				+r(992)
+					width: 80px
+					left: 70px
+
+	&__colors
+		
+		+r(480)
+			width: 100%
+			text-align: left
+
+	&__color
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		grid-template-rows: 1fr 1fr
+		grid-gap: 15px
+
+		+r(1440)
+			grid-template-columns: 1fr 1fr 1fr
+
+		+r(768)
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+
+		+r(480)
+			grid-template-columns: 1fr 1fr 1fr
+			width: 100%
+			max-width: 480px
+
+		img
+			width: 110px
+
+			+r(992)
+				width: 70px
+
+			+r(768)
+				width: 50px
+
+			+r(576)
+				width: 75px
+
+.prorerties__color--item
+
+	+r(480)
+		width: 75px
+
+	&:last-child
+
+		+r(1440)
+			grid-column-start: 2
+			grid-column-end: 2
+
+		+r(768)
+			grid-column-start: 5
+			grid-column-end: 5
+
+		+r(480)
+			grid-column-start: 2
+			grid-column-end: 2
+
+.other
+
+	&__title
+		font-size: 40px
+		font-family: $titleFont
+		margin-bottom: 65px
+
+		+r(1440)
+			font-size: 36px
+
+		+r(992)
+			font-size: 32px
+			margin-bottom: 35px
+
+		+r(768)
+			font-size: 26px
+			margin-bottom: 25px
+
+	&__list
+		+between
+		flex-direction: column
+		align-items: start
+		gap: 55px
+		padding-top: 70px
+		border-top: 1px solid #c6c5c5
+
+		+r(992)
+			padding-top: 35px
+			gap: 35px
+
+		+r(768)
+			padding-top: 25px
+
+	&__item
+		+between
+		gap: 65px
+
+		+r(1200)
+			gap: 30px
+
+		+r(992)
+			gap: 15px
+
+		+r(576)
+			justify-content: center
+			width: 100%
+
+	&__image
+		max-width: 250px
+		width: 100%
+
+		+r(1200)
+			max-width: 200px
+
+		+r(992)
+			max-width: 150px
+
+		+r(576)
+			max-width: 200px
+
+		img
+			object-fit: cover
+			width: 100%
+
+	&__info
+		+between
+		flex-direction: column
+		align-items: start
+		max-width: 630px
+
+		+r(1200)
+			max-width: 500px
+
+		+r(992)
+			max-width: 350px
+
+		+r(576)
+			max-width: 576px
+			width: 100%
+			align-items: center
+
+		&--title
+			font-size: 24px
+			font-weight: bold
+			color: $accent
+			margin-bottom: 35px
+
+			+r(1200)
+				font-size: 20px
+				margin-bottom: 25px
+
+			+r(992)
+				font-size: 16px
+				margin-bottom: 10px
+
+		&--text
+			font-size: 16px
+			margin-bottom: 35px
+
+			+r(1200)
+				margin-bottom: 25px
+
+			+r(992)
+				font-size: 14px
+				margin-bottom: 10px
+
+			+r(576)
+				text-align: center
+
+	&__price
+		+between
+		gap: 50px
+
+		+r(480)
+			flex-direction: column
+			gap: 15px
+
+		&--value
+			font-family: $titleFont
+			font-size: 24px
+			color: $accent
+
+			+r(1200)
+				font-size: 20px
+
+			+r(992)
+				font-size: 18px
+
+			+r(576)
+				font-size: 16px
+
+		&--button
+			width: 165px
+			height: 60px
+
+			+r(1200)
+				height: 50px
+
+			+r(992)
+				height: 40px
+				font-size: 12px
+
+//------------------------------------------------
