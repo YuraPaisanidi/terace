@@ -2326,9 +2326,6 @@ h3
 
 .prorerties__color--item
 
-	// +r(480)
-	// 	width: 75px
-
 	&:last-child
 
 		+r(1440)
@@ -2338,10 +2335,6 @@ h3
 		+r(768)
 			grid-column-start: 5
 			grid-column-end: 5
-
-		// +r(480)
-		// 	grid-column-start: 2
-		// 	grid-column-end: 2
 
 .other
 
@@ -2486,3 +2479,292 @@ h3
 				font-size: 12px
 
 //------------------------------------------------
+
+//----------------Trex-----------------------------
+.trex
+	background-color: $bgColor
+	padding-top: 95px
+	padding-bottom: 140px
+
+	+r(1440)
+		padding-top: 90px
+		padding-bottom: 90px
+
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+
+	&__wrapper
+		display: grid
+		grid-template-columns: 1fr 5fr
+
+		+r(576)
+			grid-template-columns: 1fr
+
+			+r(1200)
+				font-size: 45px
+				+r(767)
+					font-size: 32px
+					text-align: center
+
+	&__list
+		padding-right: 30px
+		grid-row-start: 1
+		grid-row-end: 5
+
+		+r(576)
+			display: none
+
+
+.items
+
+	&__top
+		+between
+		align-items: start
+		margin-bottom: 50px
+
+		+r(992)
+			margin-bottom: 25px
+
+		&--text
+			+between
+			flex-direction: column
+			align-items: start
+			gap: 25px
+
+			+r(992)
+				max-width: 300px
+				gap: 15px
+
+		&--logo
+
+			+r(395)
+				display: none
+
+			img
+
+				+r(1200)
+					width: 100px
+
+				+r(992)
+					width: 60px
+
+	&__title
+		font-size: 60px
+		font-family: $titleFont
+
+		span
+			color: $accent
+
+
+		+r(1440)
+			font-size: 36px
+
+		+r(992)
+			font-size: 32px
+
+		+r(480)
+			font-size: 30px
+
+	&__subtitle
+		font-size: 22px	
+
+		+r(1440)
+			font-size: 18px
+
+		+r(1200)
+			font-size: 16px
+
+		+r(576)
+			text-align: left
+
+		+r(480)
+			font-size: 14px
+
+	&__list
+		+between
+		flex-direction: column
+		align-items: start
+		gap: 55px
+		padding-top: 70px
+		padding-bottom: 70px
+		border-top: 1px solid #c6c5c5
+		border-bottom: 1px solid #c6c5c5
+
+		+r(992)
+			padding-top: 35px
+			gap: 35px
+
+		+r(768)
+			padding-top: 25px
+
+		+r(576)
+			padding-bottom: 50px
+
+	&__item
+		+between
+		gap: 65px
+
+		+r(1200)
+			gap: 30px
+
+		+r(992)
+			gap: 15px
+
+		+r(576)
+			justify-content: center
+			width: 100%
+
+	&__image
+		max-width: 250px
+		width: 100%
+
+		+r(1200)
+			max-width: 200px
+
+		+r(992)
+			max-width: 150px
+
+		+r(576)
+			max-width: 200px
+
+		img
+			object-fit: cover
+			width: 100%
+
+	&__info
+		+between
+		flex-direction: column
+		align-items: start
+		max-width: 630px
+
+		+r(1200)
+			max-width: 500px
+
+		+r(992)
+			max-width: 350px
+
+		+r(576)
+			max-width: 576px
+			width: 100%
+			align-items: center
+
+		&--title
+			font-size: 24px
+			font-weight: bold
+			color: $accent
+			margin-bottom: 35px
+
+			+r(1200)
+				font-size: 20px
+				margin-bottom: 25px
+
+			+r(992)
+				font-size: 16px
+				margin-bottom: 10px
+
+		&--text
+			font-size: 16px
+			margin-bottom: 35px
+
+			+r(1200)
+				margin-bottom: 25px
+
+			+r(992)
+				font-size: 14px
+				margin-bottom: 10px
+
+			+r(576)
+				text-align: center
+
+	&__price
+		+between
+		gap: 50px
+
+		+r(480)
+			flex-direction: column
+			gap: 15px
+
+		&--value
+			font-family: $titleFont
+			font-size: 24px
+			color: $accent
+
+			+r(1200)
+				font-size: 20px
+
+			+r(992)
+				font-size: 18px
+
+			+r(576)
+				font-size: 16px
+
+		&--button
+			width: 165px
+			height: 60px
+
+			+r(1200)
+				height: 50px
+
+			+r(992)
+				height: 40px
+				font-size: 12px
+
+.description
+	padding-top: 75px
+	+between
+	flex-direction: column
+	align-items: start
+	max-width: 1050px
+	gap: 60px
+
+	+r(480)
+		padding-top: 50px
+		grid-gap: 40px
+
+	&__text
+		font-size: 16px
+
+		+r(480)
+			font-size: 14px
+
+	&__quality
+		+between
+		gap: 85px
+
+		+r(992)
+			gap: 60px
+
+		+r(576)
+			gap: 45px
+
+
+	&__item
+		+between
+		gap: 30px
+
+		+r(992)
+			gap: 20px
+
+		+r(480)
+			width: 100%
+			justify-content: center
+		
+		p
+			font-size: 22px
+
+			+r(992)
+				font-size: 16px
+
+			+r(576)
+				font-size: 14px
+
+		img
+
+			+r(992)
+				max-width: 60px
+
+			+r(576)
+				max-width: 50px
+
+//--------------------------------------------------
