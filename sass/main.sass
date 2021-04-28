@@ -2001,6 +2001,9 @@ h3
 			font-size: 16px
 			font-weight: bold
 
+			+r(992)
+				font-size: 14px
+
 			&:hover
 				text-decoration: underline
 
@@ -2238,7 +2241,7 @@ h3
 
 		+r(576)
 			max-width: 576px
-		
+
 		+r(480)
 			text-align: left
 
@@ -2283,10 +2286,11 @@ h3
 					left: 70px
 
 	&__colors
-		
+
 		+r(480)
-			width: 100%
 			text-align: left
+			display: flex
+			flex-direction: column
 
 	&__color
 		display: grid
@@ -2300,6 +2304,11 @@ h3
 		+r(768)
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 
+		+r(480)
+			max-width: 320px
+			grid-gap: 10px
+			align-self: center
+
 		img
 			width: 110px
 
@@ -2312,10 +2321,13 @@ h3
 			+r(576)
 				width: 75px
 
+			+r(480)
+				width: 50px
+
 .prorerties__color--item
 
-	+r(480)
-		width: 75px
+	// +r(480)
+	// 	width: 75px
 
 	&:last-child
 
@@ -2326,6 +2338,10 @@ h3
 		+r(768)
 			grid-column-start: 5
 			grid-column-end: 5
+
+		// +r(480)
+		// 	grid-column-start: 2
+		// 	grid-column-end: 2
 
 .other
 
