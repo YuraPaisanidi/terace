@@ -1712,23 +1712,30 @@ h3
 
 .performered
 	padding-top: 195px
-	padding-bottom: 80px
+	padding-bottom: 145px
 	background-color: #f7f5f5
 	position: relative
 
 	&__wrapper
-		margin-bottom: 50px
+		margin-bottom: 65px
 
 	+r(1200)
 		padding-top: 145px
 
 	+r(992)
 		padding-left: 0
+		padding-bottom: 90px
+
 	+r(576)
 		&_list
 			display: none
 
+	+r(480)
+		padding-bottom: 50px
+
 	&-tabs
+		overflow: hidden
+
 		&__list
 			display: flex
 			flex-wrap: wrap
@@ -1741,11 +1748,15 @@ h3
 		&__item
 			text-transform: uppercase
 			color: $accent
+			font-family: $titleFont
 			padding: 20px
 			border: 2px solid $accent
 			cursor: pointer
 			+r(992)
 				padding: 10px
+				max-width: 250px
+				width: 100%
+				text-align: center
 
 			&:hover
 				background-color: $accent
@@ -1764,6 +1775,7 @@ h3
 		h2
 			font-size: 60px
 			color: $text
+			font-family: $titleFont
 			margin-bottom: 40px
 			+r(1200)
 				font-size: 45px
@@ -1782,8 +1794,16 @@ h3
 		p
 			font-size: 24px
 			color: $text
+			padding-left: 10px
+
+			+r(992)
+				font-size: 20px
+
+			+r(576)
+				font-size: 18px
 	&__img
 		border: 10px solid #fff
+		margin-bottom: 20px
 		img
 			width: 100%
 			height: auto
@@ -1792,7 +1812,8 @@ h3
 		display: flex
 		flex-wrap: wrap
 		justify-content: flex-start
-		gap: 30px
+		grid-column-gap: 30px
+		grid-row-gap: 60px
 
 .leftbar
 	padding: 10px 0
@@ -1853,6 +1874,48 @@ h3
 
 			&__content
 				opacity: 1
+
+.performered__button
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 190px
+	align-self: center
+
+	&--wrap
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&::before
+		display: block
+		content: ''
+		border-top: 1px solid #c6c5c5
+		width: 1000px
+		position: absolute
+		top: 50%
+		right: 270px
+
+	&::after
+		display: block
+		content: ''
+		border-top: 1px solid #c6c5c5
+		width: 1000px
+		position: absolute
+		top: 50%
+		left: 270px
+
+	&--item
+		width: 190px
+		height: 60px
+
+		+r(480)
+			max-width: 80%
+
+		+r(320)
+			width: 95%
 
 //------------ Mounting---------
 .mounting
@@ -2515,7 +2578,6 @@ h3
 		+r(576)
 			display: none
 
-
 .items
 
 	&__top
@@ -2556,7 +2618,6 @@ h3
 		span
 			color: $accent
 
-
 		+r(1440)
 			font-size: 36px
 
@@ -2567,7 +2628,7 @@ h3
 			font-size: 30px
 
 	&__subtitle
-		font-size: 22px	
+		font-size: 22px
 
 		+r(1440)
 			font-size: 18px
@@ -2738,7 +2799,6 @@ h3
 		+r(576)
 			gap: 45px
 
-
 	&__item
 		+between
 		gap: 30px
@@ -2749,7 +2809,7 @@ h3
 		+r(480)
 			width: 100%
 			justify-content: center
-		
+
 		p
 			font-size: 22px
 
