@@ -1847,9 +1847,11 @@
 	+r(992)
 		padding-left: 0
 		padding-bottom: 90px
+
+	+r(768)
+		padding-top: 80px
 	
 	+r(576)
-		padding-top: 100px
 		padding-bottom: 50px
 
 	+r(480)
@@ -1861,10 +1863,9 @@
 	&__wrapper
 		margin-bottom: 65px
 
-		+r(576)
-			margin-bottom: 30px
 
-	
+		+r(576)
+			margin-bottom: 30px	
 
 	+r(576)
 		&_list
@@ -1882,11 +1883,12 @@
 			+r(768)
 				margin-bottom: 20px
 				gap: 10px
-
-			+r(576)
 				flex-direction: column
 				align-items: center
 				justify-content: center
+
+			+r(576)
+				
 
 		&__item
 			text-transform: uppercase
@@ -1976,10 +1978,14 @@
 
 		+r(768)
 			grid-row-gap: 20px
-			grid-column-gap: 10px
+			grid-column-gap: 35px
+
+		+r(576)
+			grid-column-gap: 45px
 
 .leftbar
 	padding: 10px 0
+	text-align: left
 
 	&:last-child
 		margin-bottom: 0
@@ -2228,9 +2234,6 @@
 		+r(992)
 			grid-gap: 20px
 
-		+r(480)
-			max-width: 290px
-
 	&__title
 		margin-bottom: 30px
 		font-family: $titleFont
@@ -2291,8 +2294,7 @@
 		padding-bottom: 70px
 
 	&_wrap
-			max-width: 290px
-	
+
 	&__title
 		margin-bottom: 50px
 
@@ -2310,6 +2312,7 @@
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr 1fr
 		gap: 30px
+
 		+r(1200)
 			gap: 30px
 		+r(992)
@@ -2421,6 +2424,7 @@
 
 .leftbar-link
 	padding: 10px 0
+	text-align: left
 
 	a
 		color: $text
@@ -3160,6 +3164,7 @@
 
 			+r(1200)
 				height: 50px
+				font-size: 12px
 
 			+r(992)
 				height: 40px
@@ -3172,6 +3177,9 @@
 	align-items: start
 	max-width: 1050px
 	gap: 60px
+
+	+r(768)
+		align-items: center
 
 	+r(480)
 		padding-top: 50px
@@ -3199,6 +3207,10 @@
 
 		+r(992)
 			gap: 20px
+
+		+r(768)
+			width: 100%
+			justify-content: center
 
 		+r(480)
 			width: 100%
