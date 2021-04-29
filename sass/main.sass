@@ -157,7 +157,7 @@
 	&--active
 		z-index: 1000
 
-		&:hover
+		&:active
 			span
 				background-color: transparent
 
@@ -293,7 +293,7 @@
 				+between
 				flex-direction: column
 				flex-wrap: nowrap
-				overflow: hidden
+				// overflow: hidden
 				min-height: 600px
 
 		&--info
@@ -348,6 +348,7 @@
 		transition: 0.5s
 		background-color: $accent
 		row-gap: 25px
+		overflow: scroll
 
 		+r(576)
 			width: 80%
@@ -798,6 +799,9 @@
 			align-items: center
 			gap: 25px
 
+		+r(480)
+			margin-bottom: 25px
+
 	&__title
 		font-family: $titleFont
 
@@ -854,7 +858,7 @@
 		+r(992)
 			margin-bottom: 50px
 
-		+r(320)
+		+r(480)
 			margin-bottom: 25px
 
 	&-slide
@@ -915,7 +919,7 @@
 		+r(576)
 			width: 275px
 
-		+r(320)
+		+r(480)
 			width: 200px
 			height: 3px
 
@@ -945,8 +949,10 @@
 		+r(576)
 			width: 100px
 
-		+r(320)
+		+r(480)
 			width: 70px
+			gap: 7px
+			bottom: 1px
 
 .slider-arrow
 
@@ -1333,9 +1339,12 @@
 				max-height: 120px
 
 			+r(480)
-				// max-width: 120px
+				max-width: 120px
 				max-width: 100%
 				justify-content: center
+
+				img
+					max-width: 100px
 
 			&:last-child
 
