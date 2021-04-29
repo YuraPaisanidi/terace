@@ -56,10 +56,17 @@
 			</div>
 		</div>
 
-		<nav class="header__nav">
+		<nav class="header__nav nav">
 			<div class="header__nav--wrapper container">
-				<ul>
-					<li><a href="#" class="catalog">Каталог товаров</a></li>
+				<ul class="nav__menu">
+					<li class="nav__submenu">
+						<a href="#" class="catalog">Каталог товаров</a>
+						<!-- <ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul> -->
+					</li>
 					<li><a href="#">Готовые решения</a></li>
 					<li><a href="#">Выполненые работы</a></li>
 					<li><a href="#">Скидки и акции</a></li>
@@ -101,7 +108,7 @@
 		</nav>
 	</header>
 
-    <main class="cart main">
+	<main class="cart main">
 
         <div class="cart__wrapper container">
 
@@ -156,7 +163,7 @@
                     </div>
                 </div>
             </section>
-    
+
             <section class="product">
                 <h2 class="product__title h2">
                     Террасная доска <span>"Деревопласт"</span>,
@@ -187,7 +194,7 @@
                         </div>
                     </div>
                 </div>
-    
+
             </section>
 
             <section class="properties">
@@ -286,49 +293,36 @@
         </div>
 
     </main>
-    
-    <footer class="footer">
-        <div class="footer__wrapper container">
-            <a href="/" class="footer__policy">Политика конфиденциальности</a>
-            <p class="footer__copyright">Copyright © 2016 - 2021 Центр террасной доски</p>
-            <div class="footer__made-by">
-                <p>Сайт разработан веб-студией</p>
-                <a href="/" class="footer__made-by--link">
-                    <img src="img/made-by.png" alt="Четыре квадрата">
-                </a>
-            </div>
-        </div>
-    </footer>
 
-    <!-- Modal -->
-    <div class="modal" id="modal__edits">
-        <form action="#" class="modal__form form" method="POST">
+	<!-- Modal -->
+	<div class="modal" id="modal__edits">
+		<form action="#" class="modal__form form" method="POST">
 
-            <button class="close modal__close" type="button">
-                <span></span>
-                <span></span>
-            </button>
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
 
-            <h3 class="form__title">Заказать звонок</h3>
+			<h3 class="form__title">Заказать звонок</h3>
 
-            <input type="hidden" name="subject" value="Заказать звонок">
+			<input type="hidden" name="subject" value="Заказать звонок">
 
-            <div class="form__item">
-                <label for="formName" class="form__label">Ваше имя*</label>
-                <input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
-            </div>
+			<div class="form__item">
+				<label for="formName" class="form__label">Ваше имя*</label>
+				<input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
+			</div>
 
-            <div class="form__item">
-                <label for="formPhone" class="form__label">Номер телефона*</label>
-                <input id="formPhone" type="tel" name="phone" placeholder="Номер телефона" class="form__input _req">
-            </div>
+			<div class="form__item">
+				<label for="formPhone" class="form__label">Номер телефона*</label>
+				<input id="formPhone" type="tel" name="phone" placeholder="Номер телефона" class="form__input _req">
+			</div>
 
-            <div class="form__btn">
-                <button type="submit" class="btn form__btn_button" name="submit">Заказать звонок</button>
-            </div>
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Заказать звонок</button>
+			</div>
 
-        </form>
-    </div>
+		</form>
+	</div>
 
 </body>
 
