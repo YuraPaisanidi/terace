@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				},
 				992: {
 					slidesPerView: 2,
+					spaceBetween: 25,
 				},
 				768: {
 					slidesPerView: 1,
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
 			let list = document.querySelector(scrollTo);
-			list = '.' + list.classList[0]  + ' li a[href^="#"';
+			list = '.' + list.classList[0]  + ' a[href^="#"';
 	
 			document.querySelectorAll(list).forEach(link => {
 	
@@ -63,50 +64,41 @@ document.addEventListener("DOMContentLoaded", function() {
 								top: offsetPosition,
 								behavior: 'smooth'
 						});
-	
-						
-						let button = document.querySelector('.hamburger'),
-								nav = document.querySelector('.header__nav'),
-								header = document.querySelector('.header');
-	
-						button.classList.remove('hamburger--active');
-						nav.classList.remove('header__nav--active');
-						header.classList.remove('header--menu');
 				});
 			});
 		};
-		// scrollTo('.header__nav');
+		scrollTo('.click');
 
-		//------------------------------ACCORDIONS---------------------------
-const accordions = (accordionSelector) => {
-	const	accordion = document.querySelectorAll(accordionSelector);
+	//------------------------------ACCORDIONS---------------------------
+		const accordions = (accordionSelector) => {
+			const	accordion = document.querySelectorAll(accordionSelector);
 
-	accordion.forEach(item => {
-		const accordionClick = item.querySelector('.leftbar__header'),
-					accordionContent = item.querySelector('.leftbar__content');
+			accordion.forEach(item => {
+				const accordionClick = item.querySelector('.leftbar__header'),
+							accordionContent = item.querySelector('.leftbar__content');
 
-		accordionClick.addEventListener('click', (e) => {
-			if(!item.classList.contains('leftbar--active')) {
+				accordionClick.addEventListener('click', (e) => {
+					if(!item.classList.contains('leftbar--active')) {
 
-				item.classList.add('leftbar--active')
-				accordionContent.style.height = "auto"
-				var height = accordionContent.clientHeight + "px"
-				accordionContent.style.height = "0px"
+						item.classList.add('leftbar--active')
+						accordionContent.style.height = "auto"
+						var height = accordionContent.clientHeight + "px"
+						accordionContent.style.height = "0px"
 
-				setTimeout(() => {
-					accordionContent.style.height = height
-				}, 0)
+						setTimeout(() => {
+							accordionContent.style.height = height
+						}, 0)
 
-				} else {
-					accordionContent.style.height = "0px"
-						item.classList.remove('leftbar--active')
-			}
+						} else {
+							accordionContent.style.height = "0px"
+								item.classList.remove('leftbar--active')
+					}
 
-		});
-	});
+				});
+			});
 
-};
-accordions('.leftbar');
+		};
+		accordions('.leftbar');
 	
 	//----------------------FIXED-HEADER-----------------------
 		const headerFixed = (headerFixed, headerActive) => {
@@ -182,6 +174,46 @@ accordions('.leftbar');
 		};
 		modals('.modal');
 
+	//-------------------------------------------tabs-----------------------
+		const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+			const header = document.querySelector(headerSelector),
+						tab = document.querySelectorAll(tabSelector),
+						content = document.querySelectorAll(contentSelector);
+
+			function hideTabContent() {
+				content.forEach(item => {
+					item.style.display = "none";
+				});
+
+				tab.forEach(item => {
+					item.classList.remove(activeClass);
+				});
+			}
+
+			function showTabContent(i = 0) {
+				content[i].style.display = "block";
+				tab[i].classList.add(activeClass);
+			}
+
+			hideTabContent();
+			showTabContent();
+
+			header.addEventListener('click', (e) => {
+				const target = e.target;
+				if (target && 
+					(target.classList.contains(tabSelector.replace(/\./, '')) || 
+					target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
+					tab.forEach((item, i) => {
+						if (target == item || target.parentNode == item) {
+							hideTabContent();
+							showTabContent(i);
+						}
+					});
+				}
+			});
+		};
+		tabs('.performered-tabs', '.performered-tabs__item', '.performered-tabs__wrap', 'active');
+	
 	//----------------------FORM-----------------------
 		const forms = (formsSelector) => {
 		const form = document.querySelectorAll(formsSelector);
@@ -350,55 +382,3 @@ accordions('.leftbar');
 });
 
 
-//------------------------------------------- tabs
-const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
-	const header = document.querySelector(headerSelector),
-				tab = document.querySelectorAll(tabSelector),
-				content = document.querySelectorAll(contentSelector);
-
-	function hideTabContent() {
-		content.forEach(item => {
-			item.style.display = "none";
-		});
-
-		tab.forEach(item => {
-			item.classList.remove(activeClass);
-		});
-	}
-
-	function showTabContent(i = 0) {
-		content[i].style.display = "block";
-		tab[i].classList.add(activeClass);
-	}
-
-	hideTabContent();
-	showTabContent();
-
-	header.addEventListener('click', (e) => {
-		const target = e.target;
-		if (target && 
-			(target.classList.contains(tabSelector.replace(/\./, '')) || 
-			target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
-			tab.forEach((item, i) => {
-				if (target == item || target.parentNode == item) {
-					hideTabContent();
-					showTabContent(i);
-				}
-			});
-		}
-	});
-};
-tabs('.performered-tabs', '.performered-tabs__item', '.performered-tabs__wrap', 'active');
-
-$('.performered-tabs__wrap').hide();
-$('.performered-tabs__wrap:first').show();
-$('.performered-tabs ul a:first').addClass('active');
- $('.performered-tabs ul a').click(function(event){
-  event.preventDefault();
-  $('.performered-tabs ul a').removeClass('active');
-  $(this).addClass('active');
-  $('.performered-tabs__wrap').hide();
-   var selectTab = $(this).attr('href');
-  $(selectTab).fadeIn();
-});
-	

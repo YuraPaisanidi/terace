@@ -56,10 +56,17 @@
 			</div>
 		</div>
 
-		<nav class="header__nav">
+		<nav class="header__nav nav">
 			<div class="header__nav--wrapper container">
-				<ul>
-					<li><a href="#" class="catalog">Каталог товаров</a></li>
+				<ul class="nav__menu">
+					<li class="nav__submenu">
+						<a href="#" class="catalog">Каталог товаров</a>
+						<!-- <ul>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+							<li><a href="#">Link</a></li>
+						</ul> -->
+					</li>
 					<li><a href="#">Готовые решения</a></li>
 					<li><a href="#">Выполненые работы</a></li>
 					<li><a href="#">Скидки и акции</a></li>
@@ -101,13 +108,13 @@
 		</nav>
 	</header>
 
-	<main>
+	<main class="main">
 
 		<section class="about">
 				<div class="about__text">
 					<div class="about__text--wrapper container">
-						<h1 class="about__text--title title">
-							Мы знаем все<br>о <span>террасной доске</span>
+						<h1 class="about__text--title title h1">
+							Мы знаем все<br> о <span>террасной доске</span>
 						</h1>
 						<p class="about__text--info">
 							Предлагаем широкий ассортимент
@@ -117,7 +124,7 @@
 					</div>
 				</div>
 				<div class="about__illustration">
-					<div class="about__illustration--wrapper container">
+					<div class="about__illustration--wrapper container click">
 						<a href="#services" class="about__anchor">
 							<span>листайте вниз</span>
 							<span class="about__anchor--arrow" ><img src="img/arrow-down.png" alt="Листай вниз"></span>
@@ -128,14 +135,14 @@
 					</div>
 				</div>
 		</section>
-	
+
 		<section class="services" id="services">
 			<div class="services__wrapper container">
 				<img src="img/services.png" class="services__title" alt="">
 				<div class="services__items">
 					<article class="services__content">
 						<div class="services__content--text">
-							<h3 class="services__content--title">Террасная доска<br>из ДПК</h3>
+							<h3 class="services__content--title h3">Террасная доска<br> из ДПК</h3>
 							<p class="services__content--description">
 								Террасная доска из ДПК характеризуется долговечностью
 								и эффективностью, которую сложно достичь при использовании
@@ -152,7 +159,7 @@
 					</article>
 					<article class="services__content">
 						<div class="services__content--text">
-							<h3 class="services__content--title">Монтажные работы</h3>
+							<h3 class="services__content--title h3">Монтажные работы</h3>
 							<p class="services__content--description">
 								Предлагаем готовые решения в сфере проектирования
 								террасных систем, входных групп, причалов, летних кафе,
@@ -170,7 +177,7 @@
 					</article>
 					<article class="services__content">
 						<div class="services__content--text">
-							<h3 class="services__content--title">Ограждения</h3>
+							<h3 class="services__content--title h3">Ограждения</h3>
 							<p class="services__content--description">
 								Завершающим элементом любой террасы или настила
 								является ограждение. Именно ограждения, перила и балясины
@@ -187,7 +194,7 @@
 					</article>
 					<article class="services__content">
 						<div class="services__content--text">
-							<h3 class="services__content--title">Безшовное покрытие</h3>
+							<h3 class="services__content--title h3">Безшовное покрытие</h3>
 							<p class="services__content--description">
 								Бесшовные покрытия из натурального камня или резиновой
 								крошки. Идельное решение для дорог, парковок, а так же
@@ -204,7 +211,7 @@
 					</article>
 					<article class="services__content">
 						<div class="services__content--text">
-							<h3 class="services__content--title">фигуры из каучука</h3>
+							<h3 class="services__content--title h3">фигуры из каучука</h3>
 							<p class="services__content--description">
 								Современные резиновые фигуры для детских площадок.
 								Универсальная установка на улице и в помещениях. Качественные 
@@ -222,11 +229,11 @@
 				</div>
 			</div>
 		</section>
-	
+
 		<section class="portfolio">
 			<div class="portfolio__wrapper">
 				<div class="portfolio__top container">
-					<h2 class="portfolio__title"><span>Создаем комфорт</span> и уют</h2>
+					<h2 class="portfolio__title h2"><span>Создаем комфорт</span> и уют</h2>
 					<a href="/" class="portfolio__button btn">Все проекты</a>
 				</div>
 				<div class="portfolio__slider container">
@@ -274,10 +281,10 @@
 				</div>
 			</div>
 		</section>
-	
+
 		<section class="turnkey">
 			<div class="turnkey__wrapper container">
-				<h2 class="turnkey__title">Предоставляем полный<br>перечень услуг <span>"под ключ"</span></h2>
+				<h2 class="turnkey__title h2">Предоставляем полный<br>перечень услуг <span>"под ключ"</span></h2>
 				<p class="turnkey__subtitle">Умеем делать все - от разработки дизайна до реализации (монтажа и шеф-монтажа),
 					и последующего контроля и обслуживания. 
 					</p>
@@ -313,8 +320,9 @@
 	
 		<section class="sale">
 			<div class="sale__wrapper container">
+
 				<div class="sale__text-block">
-					<h2 class="sale__text-block--title"><span>Суперпредложение</span><br>от центра террасной<br>доски</h2>
+					<h2 class="sale__text-block--title h2"><span>Суперпредложение</span><br>от центра террасной<br>доски</h2>
 					<p class="sale__text-block--info">
 						Многим нашим клиентам не нужны просто
 						низкие цены. А нужно сочетание низких
@@ -323,9 +331,10 @@
 						услуг. <span>Мы предусмотрели ВСЕ!</span>
 					</p>
 				</div>
+
 				<div class="sale__item">
 					<div class="sale__item--info">
-						<h3 class="sale__item--title">Террасная доска «TREX»</h3>
+						<h3 class="sale__item--title h3">Террасная доска «TREX»</h3>
 						<p class="sale__item--subtitle">пустотелая, облегченная, шовная</p>
 						<div class="sale__price-block">
 							<div class="sale__price-block--discount">
@@ -343,12 +352,15 @@
 						<img src="img/board.png" alt="">
 					</div>
 				</div>
+
 			</div>
 		</section>
-	
+
 		<section class="partners">
 			<div class="partners__wrapper container">
-				<h2 class="partners__title">Работаем только с лучшими<br>производителями</h2>
+
+				<h2 class="partners__title h2">Работаем только с лучшими<br>производителями</h2>
+				
 				<div class="partners__items">
 					<div class="partners__items--content">
 						<img src="img/derevoplast-grey.png" alt="Деревопласт">
@@ -381,17 +393,23 @@
 						<img src="img/camonika.png" alt="Camonika">
 					</div>
 				</div>
+
 				<div class="partners__button">
 					<a href="/" class="partners__button--item btn">Подробнее о производителях</a>	
 				</div>
+
 			</div>
 		</section>
-	
+
 		<section class="contacts">
 			<div class="contacts__wrapper container">
-				<h2 class="contacts__title">Получите бесплатную<br>консультацию от нашего<br>дизайнера</h2>
+
+				<h2 class="contacts__title h2">
+					Получите бесплатную<br>консультацию от нашего<br>дизайнера
+				</h2>
+				
 				<div class="contacts__item">
-					<form action="" class="contacts__form">
+					<form action="#" class="contacts__form">
 						<div class="contacts__form--item">
 							<label for="formName">Ваше имя</label>
 							<input type="text" name="name" id="formName" required>
@@ -447,36 +465,35 @@
 
 	</main>
 
-<!-- Modal -->
+	<!-- Modal -->
+	<div class="modal" id="modal__edits">
+		<form action="#" class="modal__form form" method="POST">
 
-<div class="modal" id="modal__edits">
-	<form action="#" class="modal__form form" method="POST">
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
 
-		<button class="close modal__close" type="button">
-			<span></span>
-			<span></span>
-		</button>
+			<h3 class="form__title">Заказать звонок</h3>
 
-		<h3 class="form__title">Заказать звонок</h3>
+			<input type="hidden" name="subject" value="Заказать звонок">
 
-		<input type="hidden" name="subject" value="Заказать звонок">
+			<div class="form__item">
+				<label for="formName" class="form__label">Ваше имя*</label>
+				<input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
+			</div>
 
-		<div class="form__item">
-			<label for="formName" class="form__label">Ваше имя*</label>
-			<input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
-		</div>
+			<div class="form__item">
+				<label for="formPhone" class="form__label">Номер телефона*</label>
+				<input id="formPhone" type="tel" name="phone" placeholder="Номер телефона" class="form__input _req">
+			</div>
 
-		<div class="form__item">
-			<label for="formPhone" class="form__label">Номер телефона*</label>
-			<input id="formPhone" type="tel" name="phone" placeholder="Номер телефона" class="form__input _req">
-		</div>
+			<div class="form__btn">
+				<button type="submit" class="btn form__btn_button" name="submit">Заказать звонок</button>
+			</div>
 
-		<div class="form__btn">
-			<button type="submit" class="btn form__btn_button" name="submit">Заказать звонок</button>
-		</div>
-
-	</form>
-</div>
+		</form>
+	</div>
 
 </body>
 

@@ -101,10 +101,8 @@
 		</nav>
 	</header>
 
-    <main class="trex">
-
+    <main class="trex main">
         <div class="trex__wrapper container">
-
             <section class="trex__list">
                 <div class="leftbar">
                     <div class="leftbar__header">
@@ -112,10 +110,10 @@
                     </div>
                     <div class="leftbar__content">
                         <ul>
-                            <li><a>Trex</a></li>
-                            <li><a>Древопласт</a></li>
-                            <li><a>Woodvex</a></li>
-                            <li><a>Термодревесина</a></li>
+                            <li><a href="#">Trex</a></li>
+                            <li><a href="#">Древопласт</a></li>
+                            <li><a href="#">Woodvex</a></li>
+                            <li><a href="#">Термодревесина</a></li>
                         </ul>
                     </div>
                 </div>
@@ -125,8 +123,8 @@
                     </div>
                     <div class="leftbar__content">
                         <ul>
-                            <li><a>Trex</a></li>
-                            <li><a>Woodvex</a></li>
+                            <li><a href="#">Trex</a></li>
+                            <li><a href="#">Woodvex</a></li>
                         </ul>
                     </div>
                 </div>
@@ -136,38 +134,23 @@
                     </div>
                     <div class="leftbar__content">
                         <ul>
-                            <li><a>Покрытия из резиновой крошки</a></li>
+                            <li><a href="#">Покрытия из резиновой крошки</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="leftbar-link">
                     <div class="leftbar-link__header">
-                        <a><p>Фигуры из каучука</p></a>
-                    </div>
-                    <div class="leftbar__content">
-                        <ul>
-                            <li><a></a></li>
-                        </ul>
+                        <a href="#">Фигуры из каучука</a>
                     </div>
                 </div>
                 <div class="leftbar-link">
                     <div class="leftbar-link__header">
-                        <a><p>Скидки и акции</p></a>
-                    </div>
-                    <div class="leftbar__content">
-                        <ul>
-                            <li><a></a></li>
-                        </ul>
+                        <a href="#">Скидки и акции</a>
                     </div>
                 </div>
                 <div class="leftbar-link">
                     <div class="leftbar-link__header">
-                        <a><p>Монтаж</p></a>
-                    </div>
-                    <div class="leftbar__content">
-                        <ul>
-                            <li><a></a></li>
-                        </ul>
+                        <a href="#">Монтаж</a>
                     </div>
                 </div>
             </section>
@@ -175,7 +158,7 @@
             <section class="items">
                 <div class="items__top">
                     <div class="items__top--text">
-                        <h2 class="items__title">Доска <span>Trex</span></h2>
+                        <h2 class="items__title h2">Доска <span>Trex</span></h2>
                         <p class="items__subtitle">
                             Trex - ведущий производитель террасной доски, ограждений и систем освещения
                         </p>
@@ -183,7 +166,6 @@
                     <div class="items__top--logo">
                         <a href="/"><img src="img/logo-trex.png" alt=""></a>
                     </div>
-                    
                 </div>
                 
                 <div class="items__list">
@@ -259,21 +241,17 @@
                         нами на опыте. Устойчива к выцветанию, пятнам, царапинам и плесени.
                     </p>
                     <div class="description__quality">
-                            <div class="description__item">
-                                <img src="img/quality-color.png" alt="">
-                                <p>Премиум коллекции<br>цветов</p>
-                            </div>
-                            <div class="description__item">
-                                <img src="img/quality-25.png" alt="">
-                                <p>Гарантия от<br>производителя</p>
-                            </div>
+                        <div class="description__item">
+                            <img src="img/quality-color.png" alt="">
+                            <p>Премиум коллекции<br>цветов</p>
+                        </div>
+                        <div class="description__item">
+                            <img src="img/quality-25.png" alt="">
+                            <p>Гарантия от<br>производителя</p>
+                        </div>
                     </div>
             </section>
-
         </div>
-
-        
-
     </main>
     
     <footer class="footer">
@@ -289,36 +267,35 @@
         </div>
     </footer>
 
-<!-- Modal -->
+    <!-- Modal -->
+    <div class="modal" id="modal__edits">
+        <form action="#" class="modal__form form" method="POST">
 
-<div class="modal" id="modal__edits">
-	<form action="#" class="modal__form form" method="POST">
+            <button class="close modal__close" type="button">
+                <span></span>
+                <span></span>
+            </button>
 
-		<button class="close modal__close" type="button">
-			<span></span>
-			<span></span>
-		</button>
+            <h3 class="form__title h3">Заказать звонок</h3>
 
-		<h3 class="form__title">Заказать звонок</h3>
+            <input type="hidden" name="subject" value="Заказать звонок">
 
-		<input type="hidden" name="subject" value="Заказать звонок">
+            <div class="form__item">
+                <label for="formName" class="form__label">Ваше имя*</label>
+                <input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
+            </div>
 
-		<div class="form__item">
-			<label for="formName" class="form__label">Ваше имя*</label>
-			<input id="formName" type="text" name="name" placeholder="Ваше имя" class="form__input _req">
-		</div>
+            <div class="form__item">
+                <label for="formPhone" class="form__label">Номер телефона*</label>
+                <input id="formPhone" type="tel" name="phone" placeholder="Номер телефона" class="form__input _req">
+            </div>
 
-		<div class="form__item">
-			<label for="formPhone" class="form__label">Номер телефона*</label>
-			<input id="formPhone" type="tel" name="phone" placeholder="Номер телефона" class="form__input _req">
-		</div>
+            <div class="form__btn">
+                <button type="submit" class="btn form__btn_button" name="submit">Заказать звонок</button>
+            </div>
 
-		<div class="form__btn">
-			<button type="submit" class="btn form__btn_button" name="submit">Заказать звонок</button>
-		</div>
-
-	</form>
-</div>
+        </form>
+    </div>
 
 </body>
 
