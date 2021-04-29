@@ -410,6 +410,10 @@
 
 	&__submenu
 		position: relative
+		padding-left: 10px
+
+		+r(1200)
+			padding-left: 0
 
 		&:hover
 			ul
@@ -1960,6 +1964,7 @@
 			font-size: 16px
 			color: $text
 			position: relative
+
 			&::before
 				position: absolute
 				content: ''
@@ -1971,6 +1976,9 @@
 
 			&:hover
 				text-decoration: underline
+
+			a
+				color: $text
 
 		+r(1200)
 			padding-left: 20px
@@ -2153,7 +2161,7 @@
 	padding-bottom: 140px
 
 	+r(1440)
-		padding-top: 90px
+		padding-top: 50px
 		padding-bottom: 90px
 
 	+r(768)
@@ -2250,7 +2258,7 @@
 		width: 400/1083*100%
 
 		+r(768)
-			width: 70%
+			width: 100%
 
 		+r(576)
 			width: 100%
@@ -2271,6 +2279,9 @@
 
 		+r(992)
 			gap: 15px
+
+		+r(768)
+			width: 100%
 
 		+r(576)
 			width: 100%
@@ -2408,6 +2419,7 @@
 
 	+r(768)
 		padding-bottom: 35px
+		width: 100%
 
 	+r(576)
 		gap: 25px
@@ -2427,7 +2439,6 @@
 	&__info
 
 		+r(768)
-			max-width: 350px
 			width: 100%
 
 		+r(576)
@@ -2443,6 +2454,9 @@
 		flex-direction: column
 		align-items: start
 		gap: 20px
+
+		+r(768)
+			width: 100%
 
 		+r(992)
 			padding: 15px
@@ -2477,6 +2491,9 @@
 					left: 70px
 
 	&__colors
+
+		+r(768)
+			width: 100%
 
 		+r(480)
 			text-align: left
@@ -2622,6 +2639,12 @@
 				font-size: 16px
 				margin-bottom: 10px
 
+			+r(768)
+				text-align: left
+
+			+r(576)
+				text-align: center
+
 		&--text
 			font-size: 16px
 			margin-bottom: 35px
@@ -2632,6 +2655,9 @@
 			+r(992)
 				font-size: 14px
 				margin-bottom: 10px
+
+			+r(768)
+				text-align: left
 
 			+r(576)
 				text-align: center
@@ -2814,7 +2840,7 @@
 			max-width: 200px
 
 		+r(992)
-			max-width: 150px
+			max-width: 170px
 
 		+r(576)
 			max-width: 200px
@@ -2854,6 +2880,12 @@
 				font-size: 16px
 				margin-bottom: 10px
 
+			+r(768)
+				text-align: left
+			
+			+r(576)
+				text-align: center
+
 		&--text
 			font-size: 16px
 			margin-bottom: 35px
@@ -2864,6 +2896,9 @@
 			+r(992)
 				font-size: 14px
 				margin-bottom: 10px
+
+			+r(768)
+				text-align: left
 
 			+r(576)
 				text-align: center

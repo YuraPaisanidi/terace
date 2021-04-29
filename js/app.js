@@ -41,33 +41,41 @@ document.addEventListener("DOMContentLoaded", function() {
 		  });
 
 	//----------------------SCROLL-----------------------
-		const scrollTo = (scrollTo) => {
-			let list = document.querySelector(scrollTo);
-			list = '.' + list.classList[0]  + ' a[href^="#"';
+		// const scrollTo = (scrollTo) => {
+		// 	let list = document.querySelector(scrollTo);
+		// 	list = '.' + list.classList[0]  + ' a[href^="#"';
 	
-			document.querySelectorAll(list).forEach(link => {
+		// 	document.querySelectorAll(list).forEach(link => {
 	
-				link.addEventListener('click', function(e) {
-						e.preventDefault();
-						const scrollMenu = document.querySelector(scrollTo);
+		// 		link.addEventListener('click', function(e) {
+		// 				e.preventDefault();
+		// 				const scrollMenu = document.querySelector(scrollTo);
 	
-						let href = this.getAttribute('href').substring(1);
+		// 				let href = this.getAttribute('href').substring(1);
 	
-						const scrollTarget = document.getElementById(href);
+		// 				const scrollTarget = document.getElementById(href);
 	
-						// const topOffset = scrollMenu.offsetHeight;
-						const topOffset = 70;
-						const elementPosition = scrollTarget.getBoundingClientRect().top;
-						const offsetPosition = elementPosition - topOffset;
+		// 				// const topOffset = scrollMenu.offsetHeight;
+		// 				const topOffset = 70;
+		// 				const elementPosition = scrollTarget.getBoundingClientRect().top;
+		// 				const offsetPosition = elementPosition - topOffset;
 	
-						window.scrollBy({
-								top: offsetPosition,
-								behavior: 'smooth'
-						});
-				});
-			});
-		};
-		scrollTo('.click');
+		// 				window.scrollBy({
+		// 						top: offsetPosition,
+		// 						behavior: 'smooth'
+		// 				});
+
+		// 				let button = document.querySelector('.hamburger'),
+		// 						nav = document.querySelector('.header__nav'),
+		// 						header = document.querySelector('.header');
+	
+		// 				button.classList.remove('hamburger--active');
+		// 				nav.classList.remove('header__nav--active');
+		// 				header.classList.remove('header--menu');
+		// 		});
+		// 	});
+		// };
+		// scrollTo('.click');
 
 	//------------------------------ACCORDIONS---------------------------
 		const accordions = (accordionSelector) => {
