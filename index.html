@@ -124,8 +124,8 @@
 					</div>
 				</div>
 				<div class="about__illustration">
-					<div class="about__illustration--wrapper container ">
-						<a href="#services" class="about__anchor click">
+					<div class="about__illustration--wrapper container click">
+						<a href="#services" class="about__anchor">
 							<span>листайте вниз</span>
 							<span class="about__anchor--arrow" ><img src="img/arrow-down.png" alt="Листай вниз"></span>
 						</a>
@@ -449,10 +449,9 @@
 				</div>
 			</div>
 		</section>
-	
-		
+
 	</main>
-	
+
 	<footer class="footer">
 		<div class="footer__wrapper container">
 			<a href="/" class="footer__policy">Политика конфиденциальности</a>
@@ -465,7 +464,7 @@
 			</div>
 		</div>
 	</footer>
-	
+
 	<!-- Modal -->
 	<div class="modal" id="modal__edits">
 		<form action="#" class="modal__form form" method="POST">
@@ -495,6 +494,37 @@
 
 		</form>
 	</div>
+
+	<script>
+		//----------------------SCROLL-----------------------
+		const scrollTo = (scrollTo) => {
+			let list = document.querySelector(scrollTo);
+			list = '.' + list.classList[0]  + ' a[href^="#"';
+	
+			document.querySelectorAll(list).forEach(link => {
+	
+				link.addEventListener('click', function(e) {
+						e.preventDefault();
+						const scrollMenu = document.querySelector(scrollTo);
+	
+						let href = this.getAttribute('href').substring(1);
+	
+						const scrollTarget = document.getElementById(href);
+	
+						// const topOffset = scrollMenu.offsetHeight;
+						const topOffset = 70;
+						const elementPosition = scrollTarget.getBoundingClientRect().top;
+						const offsetPosition = elementPosition - topOffset;
+	
+						window.scrollBy({
+								top: offsetPosition,
+								behavior: 'smooth'
+						});
+				});
+			});
+		};
+		scrollTo('.click');
+	</script>
 
 </body>
 
