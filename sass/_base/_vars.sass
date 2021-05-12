@@ -1,30 +1,29 @@
 
 //----------------------fonts---------------------
-$title: 'Rusoone', sans-serif
-$fonts: 'Golos', sans-serif
+$mainFont: 'TTDrugs', sans-serif
+$titleFont: 'HistoryPro', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
-$accent: #ffffff
-$text: #333333
-$dark: #242526
-$red: #9D2616
-$bgColor: #F2F2F5
+$accent: #b17a58
+$text: #2b2a29
+$bgColor: #F7F5F5
 //---------------------end-color---------------------
 
 body
 	overflow-x: hidden
 	position: relative
 	min-width: 320px
-	font-family: $fonts
-	font-size: 146x
+	font-family: $mainFont
+	font-size: 14px
 	color: $text
 	line-height: 1.4
 	font-weight: 400
-	// min-height: 100vh
+	min-height: 100vh
 	display: flex
 	flex-direction: column
 	justify-content: space-between
+	scroll-behavior: smooth
 
 ::selection
 	background-color: $accent
@@ -34,10 +33,11 @@ body
 	color: #666
 	
 h1, h2, h3, h4, h5, h6
-	font-weight: 700
+	font-weight: 400
 	line-height: 1.2
 	margin: 0
 	padding: 0
+	font-family: $titleFont
 
 ul
 	margin: 0
@@ -48,10 +48,6 @@ b, strong
 	font-weight: 700
 
 p
-	font-size: 16px
-	font-weight: 400
-	color: $text
-	font-family: $fonts
 	margin: 0
 	padding: 0
 
@@ -64,6 +60,7 @@ button
 		outline: none
 		text-decoration: none
 		outline: none
+		cursor: pointer
 
 
 input, textarea, select
@@ -74,13 +71,11 @@ input, textarea, select
 	// -webkit-appearance: none
 	
 	&:focus:required:invalid
-		border-color: red
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
 
 	&:required:valid
-		border-color: green
 		outline: none
 		box-shadow: none
 		-webkit-appearance: none
