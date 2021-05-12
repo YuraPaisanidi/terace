@@ -1902,23 +1902,28 @@
 			display: none
 
 	&-tabs
-		overflow: hidden
 
 		&__list
 			display: flex
-			flex-wrap: wrap
 			gap: 20px
 			margin-bottom: 50px
 
-			+r(768)
+			+r(992)
+				height: 60px
+				gap: 20px
+				max-width: 520px
+				width: 100%
 				margin-bottom: 20px
+				overflow: scroll
+
+			+r(768)
 				gap: 10px
-				flex-direction: column
-				align-items: center
-				justify-content: center
 
 			+r(576)
-				
+				margin-bottom: 10px
+
+			+r(480)
+				height: 50px
 
 		&__item
 			text-transform: uppercase
@@ -1930,12 +1935,19 @@
 
 			+r(992)
 				padding: 10px
-				max-width: 250px
+				width: 250px
 				width: 100%
 				text-align: center
+				font-size: 12px
 
 			+r(768)
-				font-size: 14px
+				padding: 0
+				display: flex
+				justify-content: center
+				align-items: center
+
+			+r(480)
+				font-size: 10px
 
 			&:hover
 				background-color: $accent
@@ -2088,6 +2100,7 @@
 		display: flex
 		align-items: center
 		justify-content: center
+		overflow: hidden
 
 	&::before
 		display: block
