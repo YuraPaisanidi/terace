@@ -1,0 +1,21 @@
+<svg id="право" xmlns="http://www.w3.org/2000/svg" width="116" height="16" viewBox="0 0 116 16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #aa9173;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #b17a58;
+      }
+    </style>
+  </defs>
+  <path id="Фигура_2" data-name="Фигура 2" class="cls-1" d="M1610.5,986.5h-102" transform="translate(-1495.5 -977.5)"/>
+  <path id="Фигура_3" data-name="Фигура 3" class="cls-2" d="M1513.5,993.5v-16l-18,8Z" transform="translate(-1495.5 -977.5)"/>
+</svg>

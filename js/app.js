@@ -186,6 +186,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 		};
 		tabs('.performered-tabs', '.performered-tabs__item', '.performered-tabs__wrap', 'active');
+
 	
 	//----------------------FORM-----------------------
 		const forms = (formsSelector) => {
@@ -351,6 +352,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 		};
 		forms('.form');
+
 
 });
 
