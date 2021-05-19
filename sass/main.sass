@@ -71,6 +71,7 @@
 
 // -----BUTTON-----
 .btn
+	width: 200px
 	color: $accent
 	height: 50px
 	border: 1px solid $accent
@@ -872,8 +873,6 @@
 		+r(992)
 			gap: 15px
 
-		
-
 		img
 			object-fit: cover
 			width: 100%
@@ -972,7 +971,6 @@
 
 		+r(480)
 			width: 50px
-
 
 		&:hover
 			opacity: 1
@@ -1852,6 +1850,8 @@
 .sidebar
 	position: sticky
 	top: 100px
+	background-color: #fff
+	padding: 20px
 
 	&__list
 		width: 100%
@@ -3580,7 +3580,7 @@
 		margin-bottom: 40px
 		text-align: left
 
-		+r(1200)	
+		+r(1200)
 			font-size: 36px
 
 		+r(992)
@@ -3632,10 +3632,9 @@
 			p
 				+r(1200)
 					font-size: 14px
-				
+
 				+r(992)
 					font-size: 12px
-
 
 	&__slider
 		overflow: hidden
@@ -3719,7 +3718,6 @@
 				height: 50px
 				font-size: 12px
 
-
 		.swiper
 			&-container
 				padding: 0
@@ -3773,7 +3771,7 @@
 		&--image
 			height: 100%
 			width: 100%
-			
+
 //----------------Breadcrumbs-----------
 .breadcrumbs
 	position: absolute
@@ -3791,7 +3789,7 @@
 	+r(576)
 		display: none
 
-	li 
+	li
 		font-size: 14px
 
 		+r(992)
@@ -3825,3 +3823,318 @@
 			&:hover
 				color: #8a8a8a
 
+//----------------About-us-----------------
+.about-us
+	background-color: $bgColor
+	padding-top: 95px
+	padding-bottom: 120px
+
+	+r(1440)
+		padding-top: 90px
+		padding-bottom: 50px
+
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+
+	+r(576)
+		padding-top: 30px
+
+	&__wrapper
+		display: grid
+		grid-template-columns: 1fr 5fr
+		position: relative
+
+		+r(1200)
+			font-size: 45px
+
+		+r(767)
+			font-size: 32px
+			text-align: center
+
+		+r(576)
+			grid-template-columns: 1fr
+
+	&__list
+		padding-right: 30px
+		grid-row-start: 1
+		grid-row-end: 5
+
+		+r(576)
+			display: none
+
+	&__top
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 55px
+		margin-bottom: 90px
+		max-width: 895px
+
+		+r(1200)
+			margin-bottom: 35px
+			gap: 30px
+
+		+r(576)
+			align-items: center
+
+	&__info
+		font-size: 22px
+
+		+r(1200)
+			font-size: 18px
+		
+		span
+			color: $accent
+			font-weight: 600
+
+	&__prod
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 55px
+		margin-bottom: 90px
+
+		+r(1200)	
+			gap: 25px
+			margin-bottom: 55px
+
+		+r(992)
+			margin-bottom: 30px
+
+		+r(576)
+			align-items: center
+
+		&_title
+			font-size: 40px
+			font-family: $titleFont
+
+			+r(1200)
+				font-size: 32px
+
+		&_links
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr 1fr
+			grid-gap: 25px
+
+			+r(1200)
+				grid-template-columns: 1fr 1fr
+				width: 100%
+
+		&_item
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			font-size: 24px
+			font-family: $titleFont
+			color: $text
+			max-width: 245px
+			gap: 25px
+
+			+r(1200)
+				max-width: 100%
+				gap: 15px
+				font-size: 22px
+
+			+r(992)	
+				font-size: 20px
+
+			+r(768)
+				font-size: 16px
+
+			&:hover
+				color: $accent
+
+			br
+				+r(1200)
+					display: none
+
+		&_img
+			max-width: 245px
+			height: 185px
+			border: 5px solid #fff
+
+			+r(1200)
+				max-width: 100%
+				width: 100%
+				height: 230px
+
+			+r(992)
+				height: 180px
+
+			+r(768)
+				height: 130px
+				
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+			p
+				font-size: 24px
+				font-family: $titleFont
+
+	&__slider
+		overflow: hidden
+		margin-bottom: 90px
+
+		+r(1200)
+			margin-bottom: 50px
+
+		&_top
+			+between
+			margin-bottom: 30px
+			padding-left: 0
+
+			+r(1200)
+				margin-bottom: 20px
+
+			+r(768)
+				flex-direction: column
+				align-items: flex-start
+				gap: 15px
+
+			+r(576)
+				align-items: center
+
+		&_title
+			font-size: 40px
+			font-family: $titleFont
+
+			+r(1200)
+				font-size: 32px
+
+			+r(768)
+				font-size: 28px
+
+			+r(576)
+				text-align: center
+
+		&_button
+			width: 180px
+			height: 60px
+
+			+r(1200)
+				font-size: 14px
+
+			+r(992)
+				width: 160px
+				height: 50px
+				font-size: 12px
+
+		.swiper
+			&-container
+				padding: 0
+
+				&::after
+					background: none
+
+			&-wrapper
+				margin-bottom: 0
+				display: flex
+				flex-direction: row
+				align-items: baseline
+				height: auto
+				margin-bottom: 60px
+
+				+r(992)
+					margin-bottom: 30px
+
+			&-slide
+				max-height: 460px
+				max-width: 325px
+				justify-content: flex-end
+				border: none
+				background-color: transparent
+				text-align: left
+
+				+r(992)
+					max-width: 280px
+					text-align: center
+
+				+r(768)
+					height: 300px
+					max-width: 220px
+					margin-right: 20px !important
+
+				img
+					border: 10px solid #fff
+
+					+r(992)
+						border: 5px solid #fff
+
+				a
+					+r(768)
+						font-size: 14px
+
+			&-pagination
+				width: 55%
+				z-index: 10
+
+		&--image
+			height: 100%
+			width: 100%
+
+	&__bottom
+		+between
+		flex-wrap: nowrap
+		border: 1px solid #e2d0c6
+		padding: 55px
+		gap: 70px
+
+		+r(1200)
+			padding: 30px
+			gap: 30px
+
+		+r(992)
+			padding: 20px
+			gap: 20px
+
+		+r(768)
+			flex-direction: column
+
+		&_logo
+			max-width: 115px
+			width: 100%
+
+			+r(1200)
+				max-width: 80px
+
+			+r(992)
+				max-width: 60px
+
+			img
+				width: 100%
+				object-fit: cover
+				
+
+		&_text
+			font-size: 18px
+			font-weight: 600
+			color: $accent
+			max-width: 475px
+
+			+r(1200)
+				font-size: 14px
+				max-width: 400px
+
+			+r(992)
+				max-width: 280px
+
+			+r(768)
+				text-align: center
+
+		&_button
+			width: 180px
+			height: 60px
+
+			+r(1200)
+				font-size: 14px
+
+			+r(992)
+				font-size: 12px
+
+	.contacts
+		padding-top: 90px 0
+
+		
