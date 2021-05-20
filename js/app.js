@@ -350,12 +350,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		});
 		};
 		forms('.form');
-
-
 });
 
 	//--------------------SINGLE-Swiper---------------------------
-		const swiper = new Swiper('.ready__slider', '.ready__slider-2' {
+		const swiper = new Swiper('.ready__slider', '.ready__slider-2', {
 			slidesPerView: 1,
 			loop: true,
 			centeredSlides: true,
