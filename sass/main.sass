@@ -1415,6 +1415,16 @@
 		padding-top: 40px
 		padding-bottom: 40px
 
+	&--ready,
+	&--about,
+	&--contact,
+	&--action
+		padding: 90px 0
+		background-image: url(../img/contacts-bg.png)
+
+		+r(992)
+			padding: 50px 0		
+
 	&__wrapper
 		+between
 
@@ -3305,6 +3315,16 @@
 		+r(480)
 			text-align: center
 
+
+	.performered-tabs__item
+		width: 230px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		+r(768)
+			width: 50%
+
 	&_left
 		width: 40%
 
@@ -3360,12 +3380,16 @@
 	background-color: #f7f5f5
 	height: 500px
 
+	+r(992)
+		max-height: 400px
+
 	+r(767)
-		height: 450px
+		max-height: 300px
 
 	iframe
 		width: 100%
 		padding-bottom: 120px
+		height: 100%
 		+r(992)
 			padding-bottom: 50px
 
@@ -4411,5 +4435,256 @@
 	.about-us__slider
 		margin-bottom: 0
 
+//-----------------------Ready---------------
+.ready
+	background-color: $bgColor
+	padding-top: 95px
+	padding-bottom: 135px
 
+	+r(1440)
+		padding-bottom: 50px
+
+	+r(768)
+		padding-top: 50px
+		padding-bottom: 50px
+
+	+r(576)
+		padding-top: 30px
+
+	&__wrapper
+		display: grid
+		grid-template-columns: 1fr 5fr
+		position: relative
+
+		+r(1200)
+			font-size: 45px
+
+		+r(767)
+			font-size: 32px
+			text-align: center
+
+		+r(576)
+			grid-template-columns: 1fr
+
+	&__list
+		padding-right: 30px
+		grid-row-start: 1
+		grid-row-end: 5
+
+		+r(576)
+			display: none
+
+	&__title
+		margin-bottom: 90px
+		text-align: left
+
+		+r(1200)
+			margin-bottom: 35px
+
+		+r(576)
+			text-align: center
+
+		+r(480)
+			margin-bottom: 20px
+
+	&__item
+		+between
+		flex-wrap: nowrap
+		margin-bottom: 90px
+
+		+r(1200)
+			flex-direction: column
+			gap: 30px
+
+		+r(768)
+			margin-bottom: 50px
+
+		&:last-child
+			margin-bottom: 0
+
+
+		&_info
+			max-width: 500px
+			display: flex
+			flex-direction: column
+			gap: 30px
+
+			+r(1200)
+				max-width: 100%
+				width: 100%
+
+			+r(768)
+				gap: 20px
+
+			+r(480)
+				gap: 15px
+
+		&_title
+			font-size: 40px
+			font-family: $titleFont
+			margin-bottom: 30px
+			text-align: left
+
+			+r(1440)
+				font-size: 30px
+				margin-bottom: 0
+
+			+r(576)
+				font-size: 24px
+
+			+r(480)
+				font-size: 20px
+
+		&_desc
+			display: flex
+			flex-direction: row
+			align-items: flex-start
+			gap: 30px
+
+			+r(768)
+				gap: 20px
+
+			img
+				padding-top: 5px
+
+			p 
+				max-width: 430px
+				text-align: left
+				font-size: 20px
+
+				+r(1200)
+					max-width: 100%		
+
+				+r(768)
+					font-size: 16px
+
+				+r(480)	
+					font-size: 14px
+
+		&_btn
+			width: 220px
+			height: 60px
+			font-size: 14px
+
+			+r(576)
+				align-self: center
+
+			+r(480)
+				width: 160px
+				height: 50px
 		
+	&__slider
+		max-width: 460px
+		display: flex
+		height: 415px
+		flex-direction: column
+		width: 100%
+		overflow: hidden
+		position: relative
+		margin: 0 !important
+
+		+r(992)
+			max-width: 100%
+
+		+r(768)
+			height: 300px
+
+		+r(576)
+			height: 330px
+
+		+r(400)
+			height: 250px
+
+		&_wrapper
+			max-width: 100%
+			height: 355px
+			width: 100%
+			margin-bottom: 0
+
+			+r(768)
+				height: 250px
+
+			+r(576)
+				height: 300px
+
+			+r(400)
+				height: 220px
+
+		&_slide
+			max-width: 100%
+			width: 100% !important
+			height: 100%
+			border: 5px solid #fff
+			background: none
+			margin-right: 0 !important
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+		&_arrows
+			position: absolute
+			bottom: 0
+			display: flex
+			width: 100%
+			align-items: center
+			justify-content: center
+			gap: 40px
+
+		&_btn-next,
+		&_btn-prev
+			width: 115px
+			height: 15px
+			border: none
+			background-color: transparent
+			display: flex
+			align-items: center
+			justify-content: center
+			opacity: 0.4
+
+			+r(480)
+				width: 80px
+
+			&:hover
+				opacity: 1
+				+transition
+
+	&__slider-2
+		max-width: 350px
+		display: flex
+		height: 500px
+		flex-direction: column
+		width: 100%
+		overflow: hidden
+		position: relative
+		margin: 0 55px 0 0 !important
+
+		+r(768)
+			margin: 0 !important
+
+		+r(480)
+			max-width: 250px
+			height: 380px
+
+		&_wrapper
+			max-width: 100%
+			height: 450px
+			width: 100%
+			margin-bottom: 0
+
+			+r(480)
+				height: 350px
+
+		&_slide
+			max-width: 100%
+			width: 100% !important
+			height: 100%
+			border: 5px solid #fff
+			background: none
+			margin-right: 0 !important
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%

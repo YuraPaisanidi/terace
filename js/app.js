@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			}
 		  });
 
-
-
 	//------------------------------ACCORDIONS---------------------------
 		const accordions = (accordionSelector) => {
 			const	accordion = document.querySelectorAll(accordionSelector);
@@ -356,4 +354,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+	//--------------------SINGLE-Swiper---------------------------
+		const swiper = new Swiper('.ready__slider', '.ready__slider-2' {
+			slidesPerView: 1,
+			loop: true,
+			centeredSlides: true,
+			navigation: {
+			nextEl: '.ready__slider_btn-next',
+			prevEl: '.ready__slider_btn-prev',
+			},
+		});
 
