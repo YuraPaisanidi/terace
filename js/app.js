@@ -2,7 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	//----------------------swiper-SLIDER---------------------
+	// //----------------------swiper-SLIDER---------------------
 		var swiper = new Swiper('.swiper-container', {
 			slidesPerView: 3,
 			spaceBetween: 40,
@@ -353,13 +353,25 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 	//--------------------SINGLE-Swiper---------------------------
-		const swiper = new Swiper('.ready__slider', '.ready__slider-2', {
+		const swiper = new Swiper('.ready__slider', {
 			slidesPerView: 1,
 			loop: true,
 			centeredSlides: true,
 			navigation: {
-			nextEl: '.ready__slider_btn-next',
-			prevEl: '.ready__slider_btn-prev',
+				nextEl: '.ready__slider_btn-next',
+				prevEl: '.ready__slider_btn-prev',
 			},
+
+		});
+
+		const swiperSecond = new Swiper('.ready__slider-2', {
+			slidesPerView: 1,
+			loop: true,
+			centeredSlides: true,
+			navigation: {
+				nextEl: '.ready__slider_btn-next',
+				prevEl: '.ready__slider_btn-prev',
+			},
+
 		});
 

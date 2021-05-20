@@ -435,7 +435,7 @@
 			bottom: -15px
 			left: 20px
 			opacity: 0
-			+transition
+			transition: 0.3s
 
 
 		ul
@@ -452,7 +452,7 @@
 			display: flex
 			flex-direction: column
 			gap: 15px
-			+transition
+			transition: 0.3s
 
 			a
 				font-family: $mainFont
@@ -1019,8 +1019,6 @@
 
 	&-button-next
 		transform: scale(-1, 1) !important
-
-.slider-arrow
 
 .slider__img-wrapper
 	position: relative
@@ -4694,6 +4692,9 @@
 				width: 100%
 				height: 100%
 
+			.slider__img-wrapper
+				min-height: 100%
+
 		&_arrows
 			position: absolute
 			bottom: 0
@@ -4703,16 +4704,19 @@
 			justify-content: center
 			gap: 40px
 
-		&_btn-next,
+		
 		&_btn-prev
-			width: 115px
-			height: 15px
-			border: none
-			background-color: transparent
-			display: flex
-			align-items: center
-			justify-content: center
-			opacity: 0.4
+			@extend .swiper-button-prev
+
+			+r(480)
+				width: 80px
+
+			&:hover
+				opacity: 1
+				+transition
+
+		&_btn-next
+			@extend .swiper-button-next
 
 			+r(480)
 				width: 80px
@@ -4722,7 +4726,7 @@
 				+transition
 
 	&__slider-2
-		max-width: 350px
+		max-width: 349px
 		display: flex
 		height: 500px
 		flex-direction: column
@@ -4735,7 +4739,7 @@
 			margin: 0 !important
 
 		+r(480)
-			max-width: 250px
+			max-width: 249px
 			height: 380px
 
 		&_wrapper
@@ -4759,3 +4763,8 @@
 				object-fit: cover
 				width: 100%
 				height: 100%
+
+			.slider__img-wrapper
+				min-height: 100%
+
+		
