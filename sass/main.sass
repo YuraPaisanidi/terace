@@ -225,6 +225,8 @@
 			width: 100%
 			height: auto
 
+
+
 	&__button
 		width: 200px
 
@@ -453,6 +455,13 @@
 			flex-direction: column
 			gap: 15px
 			transition: 0.3s
+
+			+r(1200)
+				left: -15px
+
+			+r(400)
+				left: -55px
+				padding: 20px
 
 			a
 				font-family: $mainFont
@@ -1933,7 +1942,7 @@
 	padding: 20px
 
 	&__list
-		width: 100%
+		width: 180px
 		display: flex
 		flex-direction: column
 		align-items: start
@@ -3973,6 +3982,7 @@
 
 	&__info
 		font-size: 22px
+		line-height: 1.65
 
 		+r(1200)
 			font-size: 18px
@@ -4359,6 +4369,7 @@
 			justify-content: flex-start
 			align-items: flex-start
 			flex-wrap: nowrap
+			margin-bottom: 50px
 
 			+r(1200)
 				gap: 40px
